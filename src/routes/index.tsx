@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import principalCanvas from "../assets/principal-canvas.jpg";
+import eventLogo from "../assets/seva-logo-warm.png";
+import modiPortraitAsset from "../assets/narendra-modi-portrait.png.asset.json";
 import grandExhibition from "../assets/grand-exhibition.jpg";
 import artistStudio from "../assets/artist-studio.jpg";
 
@@ -45,7 +46,7 @@ function Index() {
           <div className="mx-auto max-w-[1280px] px-4 sm:px-10">
             <div className="museum-glass flex items-center justify-between rounded-xl px-4 py-3 shadow-lg ring-1 ring-foreground/5 sm:px-5">
               <a href="#top" className="flex min-w-0 items-center gap-2" aria-label="Seva, Sankalp, Samarpan home">
-                <span className="size-4 shrink-0 rounded-sm bg-brand-bright sm:size-5" />
+                <img src={eventLogo} alt="" width={768} height={768} className="size-10 shrink-0 rounded-sm object-cover sm:size-12" />
                 <span className="truncate font-serif text-lg tracking-tight text-brand-deep sm:text-xl">Seva <span className="text-brand-bright">·</span> Sankalp <span className="hidden sm:inline">· Samarpan</span></span>
               </a>
               <nav className="hidden items-center gap-7 text-sm font-medium text-foreground/70 lg:flex" aria-label="Main navigation">
@@ -76,10 +77,29 @@ function Index() {
                 </div>
               </div>
               <div className="relative mx-auto w-full max-w-md lg:col-span-5">
-                <img src={principalCanvas} alt="Original modernist painting representing service and India's development" width={1200} height={1600} className="aspect-[3/4] w-full rounded-2xl object-cover shadow-2xl shadow-brand-deep/15 ring-1 ring-foreground/10" />
+                <img src={modiPortraitAsset.url} alt="Painted portrait of Narendra Modi against an expressive Indian tricolour background" width={768} height={1024} className="aspect-[3/4] w-full rounded-2xl object-cover shadow-2xl shadow-brand-deep/15 ring-1 ring-foreground/10" />
                 <div className="museum-glass absolute -bottom-6 left-3 rounded-xl p-5 shadow-xl ring-1 ring-foreground/5 sm:-left-6">
                   <p className="font-serif text-3xl leading-none font-medium text-brand-deep">1,000</p><p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-foreground/60">Paintings · Stories</p>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="event-details" className="border-y border-brand-deep/10 bg-gold-light/55">
+            <div className="mx-auto max-w-[1280px] px-6 py-16 sm:px-10 sm:py-20">
+              <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
+                <div className="lg:col-span-4">
+                  <p className="font-mono text-[10px] font-medium uppercase tracking-[0.3em] text-brand-bright">Live Painting Exhibition</p>
+                  <h2 id="event-details" className="mt-4 font-serif text-4xl leading-tight text-brand-deep">Art for a Stronger India</h2>
+                  <p className="mt-4 font-serif text-xl italic text-foreground/65">Brushstrokes for a Bigger Bharat</p>
+                </div>
+                <dl className="grid gap-px overflow-hidden bg-brand-deep/10 ring-1 ring-brand-deep/10 sm:grid-cols-2 lg:col-span-8">
+                  <div className="bg-gold-light p-6"><dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-bright">Date</dt><dd className="mt-2 font-serif text-2xl text-brand-deep">September 17, 2026</dd><p className="mt-1 text-sm text-foreground/60">Thursday</p></div>
+                  <div className="bg-gold-light p-6"><dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-bright">Venue</dt><dd className="mt-2 font-serif text-2xl text-brand-deep">Sustainable Oasis</dd><p className="mt-1 text-sm leading-relaxed text-foreground/60">Rajiv Gandhi Renewable Energy Park, Leisure Valley Road, Sector 29, Gurugram, Haryana 122009</p></div>
+                </dl>
+              </div>
+              <div className="mt-10 grid gap-px overflow-hidden bg-brand-deep/10 ring-1 ring-brand-deep/10 sm:grid-cols-2 lg:grid-cols-4">
+                {["100 Renowned Artists", "Paintings Exhibition", "Youth Participation", "Art for a Better India"].map((detail) => <p key={detail} className="bg-gold-light px-5 py-4 text-center font-mono text-[10px] font-medium uppercase tracking-wider text-brand-deep">{detail}</p>)}
               </div>
             </div>
           </section>
@@ -122,7 +142,7 @@ function Index() {
           <section className="bg-brand-deep text-primary-foreground"><div className="mx-auto max-w-[1280px] px-6 py-24 text-center sm:px-10"><div className="grid gap-px overflow-hidden bg-primary-foreground/10 ring-1 ring-primary-foreground/10 sm:grid-cols-3"><div className="bg-brand-deep p-8"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-paper">Seva</p><p className="mt-4 font-serif text-2xl">A life of service.</p></div><div className="bg-brand-deep p-8"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-paper">Sankalp</p><p className="mt-4 font-serif text-2xl">A journey of determination.</p></div><div className="bg-brand-deep p-8"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-paper">Samarpan</p><p className="mt-4 font-serif text-2xl">A commitment to the nation.</p></div></div><h2 className="mt-14 font-serif text-4xl sm:text-5xl">Let art tell the story.</h2><p className="mt-4 font-mono text-[10px] uppercase tracking-[0.25em] text-primary-foreground/55">1,000 Artists · 1,000 Paintings · 1 Extraordinary Visual Journey</p></div></section>
         </main>
 
-        <footer className="bg-gold-light/45"><div className="mx-auto flex max-w-[1280px] flex-col gap-7 px-6 py-10 sm:px-10 md:flex-row md:items-end md:justify-between"><div><div className="flex items-center gap-2"><span className="size-4 rounded-sm bg-brand-bright" /><span className="font-serif text-2xl text-brand-deep">Seva · Sankalp · Samarpan</span></div><p className="mt-4 max-w-[64ch] text-[11px] leading-relaxed text-foreground/60">Concept owned and initiated by Vasudhaiva Kutumbakam Social Welfare Trust, in association with Van Kanya Arts Group. Proposed exhibition, presentation, auction and donation elements remain subject to consent, permission, applicable laws and approvals. No official endorsement is implied.</p></div><div className="flex flex-col gap-2 text-right font-mono text-[10px] uppercase tracking-wider text-brand-bright"><span>sevasankalpsamarpan.com</span><span>sevasankalpsamarpan.org</span></div></div></footer>
+        <footer className="bg-gold-light/45"><div className="mx-auto flex max-w-[1280px] flex-col gap-7 px-6 py-10 sm:px-10 md:flex-row md:items-end md:justify-between"><div><div className="flex items-center gap-3"><img src={eventLogo} alt="Seva Sankalp Samarpan" width={768} height={768} loading="lazy" className="size-16 rounded-sm object-cover" /><span className="font-serif text-2xl text-brand-deep">Seva · Sankalp · Samarpan</span></div><p className="mt-4 max-w-[64ch] text-[11px] leading-relaxed text-foreground/60">Concept owned and initiated by Vasudhaiva Kutumbakam Social Welfare Trust, in association with Van Kanya Arts Group. Proposed exhibition, presentation, auction and donation elements remain subject to consent, permission, applicable laws and approvals. No official endorsement is implied.</p></div><div className="flex flex-col gap-2 text-right font-mono text-[10px] uppercase tracking-wider text-brand-bright"><span>sevasankalpsamarpan.com</span><span>sevasankalpsamarpan.org</span></div></div></footer>
       </div>
     </div>
   );
