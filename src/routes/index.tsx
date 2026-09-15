@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import eventLogo from "../assets/seva-logo-warm.png";
 import modiPortraitAsset from "../assets/narendra-modi-portrait.png.asset.json";
 import grandExhibition from "../assets/grand-exhibition.jpg";
-import artistStudio from "../assets/artist-studio.jpg";
+import eventBanner from "../assets/event-banner.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,7 +47,7 @@ function Index() {
             <div className="museum-glass flex items-center justify-between rounded-xl px-4 py-3 shadow-lg ring-1 ring-foreground/5 sm:px-5">
               <a href="#top" className="flex min-w-0 items-center gap-2" aria-label="Seva, Sankalp, Samarpan home">
                 <img src={eventLogo} alt="" width={768} height={768} className="size-10 shrink-0 rounded-sm object-cover sm:size-12" />
-                <span className="truncate font-serif text-lg tracking-tight text-brand-deep sm:text-xl">Seva <span className="text-brand-bright">·</span> Sankalp <span className="hidden sm:inline">· Samarpan</span></span>
+                <span className="truncate font-serif text-lg tracking-tight text-brand-deep sm:text-xl">Seva <span className="text-brand-bright">·</span> Sankalp <span className="text-brand-bright">·</span> Samarpan</span>
               </a>
               <nav className="hidden items-center gap-7 text-sm font-medium text-foreground/70 lg:flex" aria-label="Main navigation">
                 <a className="nav-underline" href="#mission">Mission</a>
@@ -55,6 +55,7 @@ function Index() {
                 <a className="nav-underline" href="#exhibition">Exhibition</a>
                 <a className="nav-underline" href="#digital">Digital Museum</a>
                 <a className="nav-underline" href="#partner">Partnership</a>
+                <a className="nav-underline" href="#contact">Contact</a>
               </nav>
             </div>
           </div>
@@ -133,7 +134,7 @@ function Index() {
 
           <section id="digital" className="bg-brand-deep py-24 text-primary-foreground"><div className="mx-auto grid max-w-[1280px] gap-12 px-6 sm:px-10 lg:grid-cols-12"><div className="lg:col-span-5"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-paper">The Digital Museum</p><h2 className="mt-5 font-serif text-4xl">A permanent home for every canvas</h2><p className="mt-6 leading-relaxed text-primary-foreground/70">A QR code beside every physical painting can open its individual digital museum page—preserving the artwork, story and exhibition history for generations.</p></div><div className="grid gap-px overflow-hidden bg-primary-foreground/10 ring-1 ring-primary-foreground/10 sm:grid-cols-2 lg:col-span-7"><div className="bg-brand-deep p-6"><p className="font-serif text-5xl text-paper">001</p><p className="mt-2 text-sm text-primary-foreground/60">Painting number · title · artist · state</p></div><div className="bg-brand-deep p-6"><p className="font-serif text-2xl text-paper">The story behind the canvas</p><p className="mt-2 text-sm text-primary-foreground/60">Medium · dimensions · context · interpretation</p></div><div className="bg-brand-deep p-6"><p className="font-serif text-2xl text-paper">Living provenance</p><p className="mt-2 text-sm text-primary-foreground/60">Exhibition history · certificate · auction status</p></div><div className="bg-brand-bright p-6"><p className="font-serif text-2xl">Scan. Discover. Remember.</p><p className="mt-2 text-sm text-primary-foreground/75">One digital record for each original work.</p></div></div></div></section>
 
-          <section className="mx-auto max-w-[1280px] px-6 py-24 sm:px-10"><div className="grid overflow-hidden rounded-2xl bg-gold-light/55 ring-1 ring-brand-deep/15 lg:grid-cols-2"><img src={artistStudio} alt="Indian artist creating an original textured painting" width={1200} height={1200} loading="lazy" className="h-full min-h-96 w-full object-cover" /><div className="p-8 sm:p-12 lg:p-16"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-bright">1,000 Artists of India</p><h2 className="mt-5 font-serif text-4xl text-brand-deep">A landmark artistic gathering</h2><p className="mt-5 text-lg leading-relaxed text-foreground/75">The event brings together artistic interpretations from across India, with each canvas presenting a distinct chapter in an extraordinary national journey.</p><div className="mt-8 grid grid-cols-2 gap-6 border-y border-brand-deep/15 py-6"><div><p className="font-mono text-[9px] uppercase tracking-wider text-brand-bright">Canvas vision</p><p className="mt-2 font-serif text-xl text-brand-deep">1,000 works</p></div><div><p className="font-mono text-[9px] uppercase tracking-wider text-brand-bright">Creative expression</p><p className="mt-2 font-serif text-xl text-brand-deep">Many styles</p></div></div><p className="mt-7 text-sm leading-relaxed text-foreground/65">Together, the collection forms an expansive visual record of service, leadership, resolve and nation building.</p></div></div></section>
+          <section className="mx-auto max-w-[1280px] px-6 py-24 sm:px-10"><div className="grid overflow-hidden rounded-2xl bg-gold-light/55 ring-1 ring-brand-deep/15 lg:grid-cols-2"><img src={eventBanner.url} alt="Seva Sankalp Samarpan live painting exhibition banner, September 17 2026 at Sustainable Oasis, Gurugram" width={1600} height={533} loading="lazy" className="h-full min-h-96 w-full object-cover" /><div className="p-8 sm:p-12 lg:p-16"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-bright">1,000 Artists of India</p><h2 className="mt-5 font-serif text-4xl text-brand-deep">A landmark artistic gathering</h2><p className="mt-5 text-lg leading-relaxed text-foreground/75">The event brings together artistic interpretations from across India, with each canvas presenting a distinct chapter in an extraordinary national journey.</p><div className="mt-8 grid grid-cols-2 gap-6 border-y border-brand-deep/15 py-6"><div><p className="font-mono text-[9px] uppercase tracking-wider text-brand-bright">Canvas vision</p><p className="mt-2 font-serif text-xl text-brand-deep">1,000 works</p></div><div><p className="font-mono text-[9px] uppercase tracking-wider text-brand-bright">Creative expression</p><p className="mt-2 font-serif text-xl text-brand-deep">Many styles</p></div></div><p className="mt-7 text-sm leading-relaxed text-foreground/65">Together, the collection forms an expansive visual record of service, leadership, resolve and nation building.</p></div></div></section>
 
           <section id="partner" className="border-y border-brand-deep/10 bg-gold-light/40"><div className="mx-auto grid max-w-[1280px] gap-12 px-6 py-24 sm:px-10 lg:grid-cols-12"><div className="lg:col-span-6"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-bright">Partner with the mission</p><h2 className="mt-5 font-serif text-4xl text-brand-deep">Build the cultural record with us</h2><p className="mt-6 max-w-[54ch] leading-relaxed text-foreground/75">The initiative welcomes cultural institutions, universities, art organizations, galleries, philanthropic organizations and responsible corporate partners.</p></div><div className="lg:col-span-6"><div className="flex flex-wrap gap-2">{["Art Partner", "Knowledge Partner", "Exhibition Partner", "University Partner", "Documentation Partner", "Digital Museum Partner", "Logistics Partner", "Hospitality Partner", "CSR Supporter"].map(item => <span key={item} className="rounded-full border border-brand-deep/15 px-3 py-2 text-xs text-brand-deep">{item}</span>)}</div><a href="https://sevasankalpsamarpan.org" className="mt-8 inline-flex rounded-full bg-brand-bright px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-1">Become a Partner</a></div></div></section>
 
@@ -141,6 +142,52 @@ function Index() {
 
           <section className="bg-brand-deep text-primary-foreground"><div className="mx-auto max-w-[1280px] px-6 py-24 text-center sm:px-10"><div className="grid gap-px overflow-hidden bg-primary-foreground/10 ring-1 ring-primary-foreground/10 sm:grid-cols-3"><div className="bg-brand-deep p-8"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-paper">Seva</p><p className="mt-4 font-serif text-2xl">A life of service.</p></div><div className="bg-brand-deep p-8"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-paper">Sankalp</p><p className="mt-4 font-serif text-2xl">A journey of determination.</p></div><div className="bg-brand-deep p-8"><p className="font-mono text-[10px] uppercase tracking-[0.3em] text-paper">Samarpan</p><p className="mt-4 font-serif text-2xl">A commitment to the nation.</p></div></div><h2 className="mt-14 font-serif text-4xl sm:text-5xl">Let art tell the story.</h2><p className="mt-4 font-mono text-[10px] uppercase tracking-[0.25em] text-primary-foreground/55">1,000 Artists · 1,000 Paintings · 1 Extraordinary Visual Journey</p></div></section>
         </main>
+
+        <section id="contact" className="border-y border-brand-deep/10 bg-gold-light/45">
+          <div className="mx-auto grid max-w-[1280px] gap-12 px-6 py-24 sm:px-10 lg:grid-cols-12">
+            <div className="lg:col-span-5">
+              <p className="font-mono text-[10px] font-medium uppercase tracking-[0.3em] text-brand-bright">Contact us</p>
+              <h2 className="mt-5 font-serif text-4xl leading-tight font-medium tracking-tight text-brand-deep">Get in touch</h2>
+              <p className="mt-6 max-w-[44ch] leading-relaxed text-foreground/75">Reach out to Vasudhaiva Kutumbakam Social Welfare Trust for collaborations, partnerships and enquiries related to the Seva, Sankalp, Samarpan initiative.</p>
+            </div>
+            <div className="lg:col-span-7">
+              <div className="rounded-2xl bg-gold-light/70 p-8 ring-1 ring-brand-deep/15 sm:p-10">
+                <p className="font-serif text-2xl text-brand-deep">Vasudhaiva Kutumbakam Social Welfare Trust</p>
+                <p className="mt-1 font-serif text-base italic text-foreground/60">“The World Is One Family”</p>
+                <address className="mt-6 space-y-1 text-sm leading-relaxed text-foreground/80 not-italic">
+                  <p>107 Ram Vilas Balaji Nagar</p>
+                  <p>IOB Colony, Maruthamalai Main Road</p>
+                  <p>Coimbatore, Tamil Nadu – 641046</p>
+                  <p>India</p>
+                </address>
+                <dl className="mt-7 grid gap-5 border-t border-brand-deep/15 pt-7 sm:grid-cols-2">
+                  <div>
+                    <dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-bright">Mobile</dt>
+                    <dd className="mt-2"><a href="tel:+919488215557" className="font-serif text-lg text-brand-deep transition-colors hover:text-brand-bright">+91 94882 15557</a></dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-bright">Email</dt>
+                    <dd className="mt-2 space-y-1">
+                      <a href="mailto:vkswtrust@gmail.com" className="block font-serif text-base text-brand-deep transition-colors hover:text-brand-bright">vkswtrust@gmail.com</a>
+                      <a href="mailto:info@vkswt.com" className="block font-serif text-base text-brand-deep transition-colors hover:text-brand-bright">info@vkswt.com</a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-bright">Website</dt>
+                    <dd className="mt-2"><a href="https://vkswt.com" target="_blank" rel="noopener noreferrer" className="font-serif text-lg text-brand-deep transition-colors hover:text-brand-bright">vkswt.com</a></dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-bright">Initiative</dt>
+                    <dd className="mt-2 flex flex-col gap-1">
+                      <a href="https://sevasankalpsamarpan.com" className="font-serif text-base text-brand-deep transition-colors hover:text-brand-bright">sevasankalpsamarpan.com</a>
+                      <a href="https://sevasankalpsamarpan.org" className="font-serif text-base text-brand-deep transition-colors hover:text-brand-bright">sevasankalpsamarpan.org</a>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <footer className="bg-gold-light/45"><div className="mx-auto flex max-w-[1280px] flex-col gap-7 px-6 py-10 sm:px-10 md:flex-row md:items-end md:justify-between"><div><div className="flex items-center gap-3"><img src={eventLogo} alt="Seva Sankalp Samarpan" width={768} height={768} loading="lazy" className="size-16 rounded-sm object-cover" /><span className="font-serif text-2xl text-brand-deep">Seva · Sankalp · Samarpan</span></div><p className="mt-4 max-w-[64ch] text-[11px] leading-relaxed text-foreground/60">Concept owned and initiated by Vasudhaiva Kutumbakam Social Welfare Trust, in association with Van Kanya Arts Group. Proposed exhibition, presentation, auction and donation elements remain subject to consent, permission, applicable laws and approvals. No official endorsement is implied.</p></div><div className="flex flex-col gap-2 text-right font-mono text-[10px] uppercase tracking-wider text-brand-bright"><span>sevasankalpsamarpan.com</span><span>sevasankalpsamarpan.org</span></div></div></footer>
       </div>
