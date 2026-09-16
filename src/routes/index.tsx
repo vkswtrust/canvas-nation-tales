@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import eventLogo from "../assets/seva-logo-warm.png";
-import modiPortraitAsset from "../assets/narendra-modi-portrait.png.asset.json";
+import modiPortrait from "../assets/narendra-modi-portrait.png";
 import grandExhibition from "../assets/grand-exhibition.jpg";
-import artistPainting from "../assets/artist-painting-modi.jpg.asset.json";
+import artistPainting from "../assets/artist-painting-modi.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
